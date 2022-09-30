@@ -1,0 +1,53 @@
+﻿@model IEnumerable<LOADMORE.Models.Employee>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.Age)</td>
+                </tr>
+            }
+        
+@*<script>
+    $("#loading").click(function () {
+        GetData();
+    });
+
+    function GetData() {
+        var currentIndex2 = 1;
+        var elementsNumber2 = 3;
+
+        $.ajax({
+            type: "POST",
+            url: 'Loadmore/Index',
+
+            dataType: "json"
+        });
+        
+    }
+</script>*@
+@*section scripts{
+    $("#next").click(function () {
+    GetData();
+    });
+
+    function GetData() {
+    var currentIndex2 = 1;
+    var elementsNumber2 = 3;
+
+    $.ajax({
+    type: "POST",
+    url: 'Restauracja/GetData',
+    data: { currentIndex: currentIndex2, elementsNumber: elementsNumber2 },
+
+    dataType: "json",
+    success:
+    error: function () { alert('Niesukces'); },
+    });
+    }
+    <script src="~/js/loadmore.js"></script>
+    <script type="text/javascript">
+    </script>
+}*@
